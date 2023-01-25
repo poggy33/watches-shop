@@ -28,8 +28,6 @@ function App() {
     getWatches();
   }, []);
 
-  // console.log(watches);
-
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
@@ -56,10 +54,7 @@ function App() {
           path="/card"
           element={<Card cardInfo={cardInfo} setCart={setCart} cart={cart} />}
         />
-                <Route
-          path="/cart"
-          element={<Cart cart={cart} setCart={setCart}/>}
-        />
+        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>

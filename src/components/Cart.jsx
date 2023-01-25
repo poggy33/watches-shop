@@ -20,7 +20,6 @@ const CardButton = styled(Button)(() => ({
 export default function Cart({ cart, setCart }) {
   const navigate = useNavigate();
   const [summary, setSummary] = useState(0);
-  console.log(cart)
 
   useEffect(() => {
     if (cart.length > 0) {
@@ -35,12 +34,12 @@ export default function Cart({ cart, setCart }) {
   }, [cart, cart.length]);
 
   const removeItem = (id) => {
-    cart.map((item)=>{
-      if(item.id===id){
-        item.countSale=1
+    cart.map((item) => {
+      if (item.id === id) {
+        item.countSale = 1;
       }
       return id;
-    })
+    });
     let newCart = cart.filter((item) => item.id !== id);
     setCart(newCart);
   };
