@@ -108,7 +108,7 @@ export default function MasonryImageList({ setCardInfo, watches, setCart, cart, 
                 sx={{
                   "&:hover": {
                     border: "0.5px solid lightGrey",
-                  },
+                  }, border: "0.5px solid white"
                 }}
               >
                 <img
